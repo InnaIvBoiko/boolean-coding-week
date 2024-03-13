@@ -12,6 +12,14 @@ COLOR PALETTE
   padding: 0;
   box-sizing: border-box;
 }
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
 
 /* Utilities */
 .container {
@@ -49,7 +57,7 @@ h1 {
 .add-todo {
   display: flex;
   gap: 8px;
-  margin-top: 16px;
+  margin: 16px 0;
 }
 
 input {
@@ -81,7 +89,7 @@ button {
   align-items: center;
   list-style-type: none;
   background-color: rgb(255, 255, 255);
-  margin: 16px 0;
+  margin-top: 16px;
   border-radius: 16px;
 }
 
@@ -94,4 +102,10 @@ button {
   padding: 16px;
   border-radius: 16px 0 0 16px;
   background-color: rgb(217, 255, 102);
+}
+
+.delete-all {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
 }

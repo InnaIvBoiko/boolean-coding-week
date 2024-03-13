@@ -5,6 +5,7 @@ const button = document.querySelector('button');
 const inputField = document.querySelector('input');
 const todoList = document.querySelector('.todo-list');
 const emptyListMessage = document.querySelector('.empty-list-message');
+const deleteAll = document.querySelector('.delete-all');
 
 const STORAGE_KEY = '__bool_todo__';
 const storage = localStorage.getItem(STORAGE_KEY);
@@ -20,6 +21,13 @@ showContent();
 
 // # Operazioni dinamiche
 button.addEventListener('click', addActivity);
+deleteAll.addEventListener('click', () => {
+    if (window.confirm('DO YOU REALLY WANT TO CLEAR YOUR TODO LIST?')) {
+        localStorage.clear();
+        activities = [];
+        showContent();
+    };
+});
 
 // # Functions
 
